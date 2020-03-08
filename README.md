@@ -5,13 +5,17 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
 * Reacts language
 * When rendering JSX, everything needs to be wrapped into one element
 * If we want to interpret anything in JSX as JS, you can surround the JS code with {}.
+```
     ex. const name = "Jason";
         return (<h1> Hello {name}! </h1>)   //will return "Hello Jason!"
     A good convention to follow is by using ES6 convention of backticks.
-    ex. const firstName = "Jason";
+```
+    ex.
+```
+        const firstName = "Jason";
         const lastName = "De Lara";
         return (<h1> Hello {`${firstName} ${lastName}`}! </h1>)   //will return "Hello Jason De Lara!"
-
+```
 ### Styling
 * In a JSX element you can add a class with a `className="someClass"`, you can't do this with Components you create.
 * With JSX elements, inline styles are not interpreted as a string but an object.
