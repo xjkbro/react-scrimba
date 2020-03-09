@@ -43,3 +43,58 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
 * Components can created in a separate file and can be imported. (Standard convention, with naming convention as camel case, ex. (MyComponent.js)
 * Components in separate files must be exported with "export default ComponentName"
 
+
+## Props
+* In HTML some elements require some type of attribute more than just their tag for it to function properly. 
+* An anology for props are like attributes for elements as props for components or as parameters for functions.
+    - ex. We have a card, and in one card it has an img, a name, a phone number and an email. We are trying to output 5 different cards but all the information is different.
+The use of props passed in a component
+```
+    <Card                                       //Card component
+        name="someName"                         //Cards props being passed in
+        imgURL="http://someURL.com/"
+        phone="555-555-555"
+        email="someEmail@gmail.com"
+    />
+```
+The component and using the props
+```
+function Card(props) {
+    return (
+        <div>
+            <img src={props.imgURL}/>
+            <h1>{props.name}</h1>
+            <ul>
+                <li>Phone number: {props.phone}</li>
+                <li>Email: {props.email}</li>
+            </ul>
+        </div>
+    )
+}
+```
+* If you require to pass in large number of props. It would be benneficial to create an object and pass a single prop.
+    - ex.
+```
+    <Card
+        info = {{                         //Remember double curly, 1st to use Javascript, 2nd to say were using an object.
+        name: "someName,
+        imgURL: "http://someURL.com/",
+        phone: "555-555-555",
+        email: "someEmail@gmail.com"
+        }}
+    />
+
+    function Card(props) {
+    return (
+        <div>
+            <img src={props.info.imgURL}/>
+            <h1>{props.info.name}</h1>
+            <ul>
+                <li>Phone number: {props.info.phone}</li>
+                <li>Email: {props.info.email}</li>
+            </ul>
+        </div>
+    )
+}
+
+```
