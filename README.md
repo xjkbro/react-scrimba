@@ -49,7 +49,7 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
 * An anology for props are like attributes for elements as props for components or as parameters for functions.
     - ex. We have a card, and in one card it has an img, a name, a phone number and an email. We are trying to output 5 different cards but all the information is different.
 
-- The use of props passed in a component
+    The use of props passed in a component
 ```
     <Card                                       //Card component
         name="someName"                         //Cards props being passed in
@@ -58,7 +58,7 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
         email="someEmail@gmail.com"
     />
 ```
-- The component and using the props
+    The component and using the props
 ```
 function Card(props) {
     return (
