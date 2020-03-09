@@ -77,9 +77,9 @@ function Card(props) {
     - ex.
 ```
     <Card
-        info = {{                         //Remember double curly, 1st to use Javascript, 2nd to say were using an object.
-        name: "someName,
-        imgURL: "http://someURL.com/",
+        info = {{                                       //Remember double curly
+        name: "someName,                                //1st to use Javascript
+        imgURL: "http://someURL.com/",                  //2nd to say were using an object.
         phone: "555-555-555",
         email: "someEmail@gmail.com"
         }}
