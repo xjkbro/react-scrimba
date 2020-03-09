@@ -38,7 +38,7 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
     )
     ...
 ```
-## Components
+## Functional Components
 * To render functional components, the function must be in a self closing tag. ex. <App />
 * Components can created in a separate file and can be imported. (Standard convention, with naming convention as camel case, ex. (MyComponent.js)
 * Components in separate files must be exported with "export default ComponentName"
@@ -49,7 +49,7 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
 * An anology for props are like attributes for elements as props for components or as parameters for functions.
     - ex. We have a card, and in one card it has an img, a name, a phone number and an email. We are trying to output 5 different cards but all the information is different.
 
-    The use of props passed in a component
+* The use of props passed in a component
 ```
     <Card                                       //Card component
         name="someName"                         //Cards props being passed in
@@ -58,7 +58,7 @@ Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glea
         email="someEmail@gmail.com"
     />
 ```
-    The component and using the props
+* The component and using the props
 ```
 function Card(props) {
     return (
@@ -99,3 +99,77 @@ function Card(props) {
 }
 
 ```
+###### It's crucial to learn basic Vanilla Javascript to use React. Majority of the time when using React, you'll most likely need to use Higher-Order methods like map, filter, sort. [Reference](https://scrimba.com/p/p7P5Hd/cDZbahv)
+const jokeAPI = 'https://official-joke-api.appspot.com/random_joke';
+let joke = fetch(jokeAPI).json();
+conosole.log(joke);
+
+## Class Based Component
+* Functional components can limit you.
+* Class components can have a constructor
+    - each constructor must have a call to `super()` which goes to the parent class aka the super class and brings some information to the calling/working class or the component could use that information.
+    - ex. These are the same components. Ones a functional component and the other is a class component.
+```
+function FuncComp() {
+    return (
+        <h1> Hello </h1>
+    )
+}
+
+class ClassComp extends React.Component {
+    render() {
+        return (
+            <h1> Hello </h1>
+        }
+    }
+}
+```
+In class components 
+```
+class ClassComp extends React.Component {
+    sayHello() {                                    //this is where you can create class methods
+        return "Hello"
+    }
+    render() {
+        const name = this.props.name;               //this is where you can use javascript 
+                                                    //and usage of props require `this`
+        return (
+            <div>
+                <p>{this.sayHello()} {name}</p>     //class methods require `this` to be used
+            </div>
+        )
+    }
+}
+```
+
+## States
+* This is the most important thing about learning React.
+* State is the date that a component maintains. The data can change it's value. Similar to passing a parameter by reference or even pointers.
+* **To use states the component must be a class based component.**
+* States must be initialized in a *class* based components constructor.
+    - ex. Example class component
+```
+class SomeComponent extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            someKey: someValue              // to use this in any of the code just use `this.state.someKey` see below
+        }
+    }
+    render() {
+        return (
+            <div>
+                {this.state.someKey}
+            </div>
+        )
+    }
+}
+```
+* A basic pass a child component of SomeComponent should look like this `<SomeChildComponent key={this.state.someKey} />`
+
+
+## Event Handlers
+* Event Handlers are useful in React for the fact that it changes our static page to do something. 
+* Helpful for checkboxes, buttons, etc.
+* Every HTML Event Handler is in React but are now camel case. `onclick` is now `onClick`.
+* Here are a list of Event Handlers are listed [here](https://www.w3schools.com/jsref/dom_obj_event.asp). Don't forget **camel case**.
