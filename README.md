@@ -167,9 +167,47 @@ class SomeComponent extends React.Component {
 ```
 * A basic pass a child component of SomeComponent should look like this `<SomeChildComponent key={this.state.someKey} />`
 
+###### SetState
+* Anytime you want to change state, you need to use the setState method
+* Anytime you want to use setState in a method, you must bind that method to the constructor.
+    - ex.
+```
+class SomeComponent extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            someKey: 0
+        }
+        this.changeState = this.changeState.bind(this);                     
+        // ^^ binding the changeState method to the constructor to use setState in that method
+    }
+    changeState(){
+        this.setState((prevState) => {                  //setState gives you the value of the current state
+                                                        // and allows you to change it by using that currentState as a parameter
 
-## Event Handlers
+            return {                                    //returns how the state object should look like or a new version of state
+                count: prevState.count + 1              //cant use ++ because that directly modifies the state.
+            }
+        }
+        );
+    }
+    render() {
+        return (
+            <div>
+                <h1>{this.state.someKey}</h1>
+                <button onClick={this.handleClick}>Change!</button>            
+            </div>
+        )
+    }
+}
+    
+```
+
+
+###### Event Handlers
 * Event Handlers are useful in React for the fact that it changes our static page to do something. 
 * Helpful for checkboxes, buttons, etc.
 * Every HTML Event Handler is in React but are now camel case. `onclick` is now `onClick`.
 * Here are a list of Event Handlers are listed [here](https://www.w3schools.com/jsref/dom_obj_event.asp). Don't forget **camel case**.
+
+
