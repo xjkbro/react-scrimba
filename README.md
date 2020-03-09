@@ -203,6 +203,67 @@ class SomeComponent extends React.Component {
     
 ```
 
+###### Phase 6 of To Do App Example of using setState throughout Components
+```
+    
+    const todosData = [
+    {
+        id: 1,
+        text: "Take out the trash",
+        completed: true
+    },
+    ...
+    
+    ------------------------
+    function TodoItem(props) {
+        return (
+            <div className="todo-item">
+                <input 
+                    type="checkbox" 
+                    checked={props.item.completed} 
+                    onChange={() => props.handleChange(props.item.id)}
+                />
+                <p>{props.item.text}</p>
+            </div>
+        )
+    }
+    -------------------------
+    class App extends React.Component {
+        constructor() {
+            super()
+            this.state = {
+                todos: todosData
+            }
+            this.handleChange = this.handleChange.bind(this)
+        }
+        
+        handleChange(id) {
+            this.setState(prevState => {
+                const updatedTodos = prevState.todos.map(todo => {
+                    if (todo.id === id) {
+                        todo.completed = !todo.completed
+                    }
+                    return todo
+                })
+                return {
+                    todos: updatedTodos
+                }
+            })
+        }
+        
+        render() {
+            const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
+            
+            return (
+                <div className="todo-list">
+                    {todoItems}
+                </div>
+            )    
+        }
+    }
+
+```
+
 
 ###### Event Handlers
 * Event Handlers are useful in React for the fact that it changes our static page to do something. 
