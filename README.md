@@ -99,7 +99,7 @@ function Card(props) {
 }
 
 ```
-###### It's crucial to learn basic Vanilla Javascript to use React. Majority of the time when using React, you'll most likely need to use Higher-Order methods like map, filter, sort. [Reference](https://scrimba.com/p/p7P5Hd/cDZbahv)
+
 const jokeAPI = 'https://official-joke-api.appspot.com/random_joke';
 let joke = fetch(jokeAPI).json();
 conosole.log(joke);
@@ -144,7 +144,7 @@ class ClassComp extends React.Component {
 
 ## States
 * This is the most important thing about learning React.
-* State is the date that a component maintains. The data can change it's value. Similar to passing a parameter by reference or even pointers.
+* State is the data that a component maintains. The data can change it's value. Similar to passing a parameter by reference or even pointers.
 * **To use states the component must be a class based component.**
 * States must be initialized in a *class* based components constructor.
     - ex. Example class component
@@ -202,6 +202,7 @@ class SomeComponent extends React.Component {
 }
     
 ```
+* If a component is passing a state as a prop to a child componenet, the child component gets rerendered by the parent component. 
 
 ###### Phase 6 of To Do App Example of using setState throughout Components
 ```
@@ -263,7 +264,27 @@ class SomeComponent extends React.Component {
     }
 
 ```
+## Lifecycle methods
+* Methods that has goals/milestones throughout the cycle of your React app as it's running. Best way to understand it is like a React app is like a human life. They have many goals and milestones during their whole lifecycle and things happen during each milestone up until they die, or their app stops running.
+* https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
+* List of very important ones: 
+    - `render()` - It's job is to determine what gets displayed on the screen. You can run the render method as much as you want.
+    - `componentDidMount()` - It's job is to run when the app initially launches/runs. Common use is to do an API call
+    - `componentWillRecieveProps()` - It's a method that will always run when the particular component that has the function recieves a props.
+        - ex. ParentComponent uses the a child component and passes a prop name `< ChildComp name="Jason"/> ` if ChildComp had a `componentWillRecieveProps()` method in it, it would run first and every time you call a prop to ChildComp. 
+        - Common use is to check if the props passed were different from before.
+        - **Depricated after v17**
+    - `shouldComponentUpdate()` - It's a method that can be used to check if something happend and do some specific action if it did or nothing if it didn't. Commonly used to optimized the app. Will also take in parameters: `nextProps` and `nextState`
+    - `componentWillUnmount()` - Commonly used to teardown or clean up code before your component disappears. ex. remove an event listener.
+    - `componentDidUpdate()` - Similar to `componentDidMount()` however it wont run when it's first mounted because it never update. It would only run when something has been updated. The course's example was to change the color of the incrementing number whenever it did increment. Also important to know that you should be careful using setState in this method as it will cause an infinite loop.
+* Depricated Lifecycle methods after v17: `componentWillMount()`, `componentWillUpdate()`, and `componentWillReceiveProps()`
+* In their place we will recieve: 
+    - `static getDerivedStateFromProps(props, state)` - requires parameters props and state and also requires to be a static function. The method will need to return a new updated state based upon the props. Most likely not need it. 
+    - `getSnapshotBeforeUpdate()` - create a backup of the current way things are. Won't be common to use.
 
+###### Conditional Rendering 
+* Loading something on the screen if a certain condion is true. 
+* Good use is to have a loading message and done loading message.
 
 ###### Event Handlers
 * Event Handlers are useful in React for the fact that it changes our static page to do something. 
@@ -272,3 +293,10 @@ class SomeComponent extends React.Component {
 * Here are a list of Event Handlers are listed [here](https://www.w3schools.com/jsref/dom_obj_event.asp). Don't forget **camel case**.
 
 
+###### Useful Javascript/ES6 functionality.
+* It's crucial to learn basic Vanilla Javascript to use React.
+* Majority of the time when using React you'll most likely need to use:
+    - Object spread notation `{...someObject}` short hand to give a new object the same properties as someObject.
+    - Arrow Functions `() => {}` short hand for creating a function. `function someFunction() {}`
+    - Higher-Order methods like map, filter, sort. [Reference](https://scrimba.com/p/p7P5Hd/cDZbahv)
+* Basically know ES6
