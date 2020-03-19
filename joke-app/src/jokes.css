@@ -1,0 +1,72 @@
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f19292;
+}
+.child {
+    /* margin: auto;
+    position: relative;
+    width: 40vw; */
+    background-color: #fcf7bb;
+    box-shadow: -10px 10px 1px #f6d186;
+    border-radius: 50px;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+    padding: 50px;
+}
+
+a {
+    padding: 5px;
+    margin: 10px;
+    box-shadow: -2px 2px 5px gray;
+    background-color: #f19292;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+h1,h4 {
+    color: #c06c84;
+}
+.line {
+    background-color: #cbe2b0;
+    height: 400px;
+    width: 200vw;
+    position: absolute;
+    left:-1200px;
+    top: 50px;
+    transform: rotate(45deg);
+}
+
+@media all and (max-width: 1200px){
+    .line {
+        width: 200vw;
+        left:-500px;
+
+    }
+}
+@media all and (max-width: 1080px){
+    .line {
+        width: 200vw;
+        left:-500px;
+        top: 300px;
+
+    }
+}
+@media all and (max-width: 700px){
+    .line {
+        height: 100vh;
+        width: 25vw;
+        left:50%;
+        top:0;
+        transform: rotate(0deg) translate(-50%);
+    }
+}
