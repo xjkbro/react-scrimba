@@ -1,0 +1,603 @@
+[ 
+    { 
+    "level": { 
+    "value": 1, 
+    "exp": 50 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 2, 
+    "exp": 200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 3, 
+    "exp": 450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 4, 
+    "exp": 800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 5, 
+    "exp": 1250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 6, 
+    "exp": 1800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 7, 
+    "exp": 2450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 8, 
+    "exp": 3200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 9, 
+    "exp": 4050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 10, 
+    "exp": 5000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 11, 
+    "exp": 6050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 12, 
+    "exp": 7200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 13, 
+    "exp": 8450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 14, 
+    "exp": 9800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 15, 
+    "exp": 11250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 16, 
+    "exp": 12800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 17, 
+    "exp": 14450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 18, 
+    "exp": 16200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 19, 
+    "exp": 18050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 20, 
+    "exp": 20000 
+    } 
+    }, 
+ 
+    { 
+    "level": { 
+    "value": 21, 
+    "exp": 22050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 22, 
+    "exp": 24200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 23, 
+    "exp": 26450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 24, 
+    "exp": 28800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 25, 
+    "exp": 31250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 26, 
+    "exp": 33800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 27, 
+    "exp": 36450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 28, 
+    "exp": 39200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 29, 
+    "exp": 42050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 30, 
+    "exp": 45000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 31, 
+    "exp": 48050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 32, 
+    "exp": 51200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 33, 
+    "exp": 54450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 34, 
+    "exp": 57800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 35, 
+    "exp": 61250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 36, 
+    "exp": 64800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 37, 
+    "exp": 68450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 38, 
+    "exp": 72200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 39, 
+    "exp": 76050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 40, 
+    "exp": 80000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 41, 
+    "exp": 84050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 42, 
+    "exp": 88200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 43, 
+    "exp": 92450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 44, 
+    "exp": 96800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 45, 
+    "exp": 101250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 46, 
+    "exp": 105800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 47, 
+    "exp": 110450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 48, 
+    "exp": 115200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 49, 
+    "exp": 120050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 50, 
+    "exp": 125000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 51, 
+    "exp": 130050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 52, 
+    "exp": 135200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 53, 
+    "exp": 140450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 54, 
+    "exp": 145800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 55, 
+    "exp": 151250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 56, 
+    "exp": 156800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 57, 
+    "exp": 162450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 58, 
+    "exp": 168200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 59, 
+    "exp": 174050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 60, 
+    "exp": 180000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 61, 
+    "exp": 186050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 62, 
+    "exp": 192200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 63, 
+    "exp": 198450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 64, 
+    "exp": 204800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 65, 
+    "exp": 211250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 66, 
+    "exp": 217800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 67, 
+    "exp": 224450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 68, 
+    "exp": 231200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 69, 
+    "exp": 238050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 70, 
+    "exp": 245000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 71, 
+    "exp": 252050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 72, 
+    "exp": 259200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 73, 
+    "exp": 266450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 74, 
+    "exp": 273800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 75, 
+    "exp": 281250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 76, 
+    "exp": 288800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 77, 
+    "exp": 296450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 78, 
+    "exp": 304200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 79, 
+    "exp": 312050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 80, 
+    "exp": 320000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 81, 
+    "exp": 328050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 82, 
+    "exp": 336200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 83, 
+    "exp": 344450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 84, 
+    "exp": 352800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 85, 
+    "exp": 361250 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 86, 
+    "exp": 369800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 87, 
+    "exp": 378450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 88, 
+    "exp": 387200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 89, 
+    "exp": 396050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 90, 
+    "exp": 405000 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 91, 
+    "exp": 414050 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 92, 
+    "exp": 423200 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 93, 
+    "exp": 432450 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 94, 
+    "exp": 441800 
+    } 
+    }, 
+    { 
+    "level": { 
+    "value": 95, 
+    "exp": 451250 
+    } 
+    }, 
+    { 
+    "level": { 
+        "value": 96, 
+        "exp": 460800 
+        } 
+    }, 
+    { 
+    "level": { 
+        "value": 97, 
+        "exp": 470450 
+        } 
+    }, 
+    { 
+    "level": { 
+        "value": 98, 
+        "exp": 480200 
+        } 
+    }, 
+    { 
+    "level": { 
+        "value": 99, 
+        "exp": 490050 
+        } 
+    }, 
+    { 
+    "level": { 
+        "value": 100, 
+        "exp": 500000 
+        }
+    }
+]
