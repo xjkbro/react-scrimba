@@ -600,6 +600,24 @@ export default FormContainer
     - whatever the value passed in useState doesnt have to be a single value and can be an object, however changing the state is just as hard as before with spread notation. so it's better to create a new state.
     - `const example = useState('hello'); console.log(example)` the console will log `['hello', f() ]`
     - `const [greeting, setGreeting] = useState('Hello'); console.log(greeting)` the console will log `Hello`
+* whatever you have initialized the setState function, you still should approach the same convention to NOT directly manipulate state but have the current value of state passed and manipulate that.
+* Ex. 
+
+```
+export default function Playground() {
+  const [count, setCount] = useState(0)
+  const decrement = () => {
+      setCount(currentCount => currentCount - 1)
+  }
+  return (
+    <div>
+      {count}
+      <button onClick={decrement}>-</button>             
+      <button onClick={() => setCount(currentCount => currentCount + 1)}>+</button>  // This explains the bullet above
+    </div>
+  )
+}
+```
 
 
 
