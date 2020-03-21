@@ -1,5 +1,9 @@
 # ReactJS
-Thank you to Bob Ziroll for the Scrimba Course [here](https://scrimba.com/g/glearnreact)
+* Thank you to Scrimba's:
+    - Bob Ziroll for the Introduction to React Course [here](https://scrimba.com/g/glearnreact)
+    - Christian Jensen for the React Hooks Course [here](https://scrimba.com/g/greacthooks)
+* Project Ideas: [Link 1](https://www.freecodecamp.org/news/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d/) [Link 2](https://www.freecodecamp.org/news/want-to-build-something-fun-heres-a-list-of-sample-web-app-ideas-b991bce0ed9a/)
+
 ## JSX
 * HTML that can run in js files
 * Reacts language
@@ -555,6 +559,91 @@ export default FormContainer
 
 * Lastly, it's only necessary to import the Container in the main js.
 
+## New additions following the Scrimba Course
+* Methods can be substituted with a arrow function. This gives the method a lexical `this` and you dont need to **bind** the method in the constructor anymore
+* Creating class variables is now available and now creating a constructor can now be deprecated. 
+    - Ex. Instead of creating state in the constructor, it's now possible to create state out of the constructor by the following:
+    - `state = { yourProp: "itsVal" }`
+* The Context API is now released officially and it's an alternative to Redux. Both are state managers and will help minimized problems with passing props and state from parent to child. [Reference to Context API](https://reactjs.org/docs/context.html)
+* Other important useful additions: 
+    - Error Boundaries - https://reactjs.org/docs/error-boundaries.html
+    - render props - https://reactjs.org/docs/render-props.html
+    - Higher Order Components - https://reactjs.org/docs/higher-order-components.html
+    - React Router - https://reacttraining.com/react-router/core/guides/philosophy
+    - React Hooks - https://reactjs.org/docs/hooks-intro.html
+    - React lazy, memo, and Suspense - https://reactjs.org/blog/2018/10/23/react-v-16-6.html
+* React is not going to completely deprecate Class components but Functional components are going to be the main way to create components. Hooks have made class components unnecessary. 
+
+## React Hooks
+* "Hooks into" state and lifecycle methods of components without using classes.
+* Only use functional components across the board.
+* Improve readability and organization of components.
+* Different hooks you'll most likely need:
+    - [useState()](#useState)
+    - [useEffect()](#useEffect)
+    - [useRef()](#useRef)
+    - [useCallback()](#useCallback)
+    - [useMemo()](#useMemo)
+    - [React.memo](#react.memo)
+    - [Custom Hooks](#custom-hooks)
+
+
+###### useState()
+* useState hook is basically the way to use state in a functional component.
+* by using useState, you are essentially initializing state with whatever value/object you pass in as a state.
+* useState returns an array of two values one with the state and one with a function to set the state.
+* Ex. `const [count, setCount] = useState(0)`
+    - count is the state. 
+    - setCount is a function created exactly like setState but to only change the state of this particular state.
+    - useState has the value 0 passed as the value of within state.
+    - convention is to name the state whatever the state is about and name the function setTHENAMEOFTHESTATE
+    - whatever the value passed in useState doesnt have to be a single value and can be an object, however changing the state is just as hard as before with spread notation. so it's better to create a new state.
+    - `const example = useState('hello'); console.log(example)` the console will log `['hello', f() ]`
+    - `const [greeting, setGreeting] = useState('Hello'); console.log(greeting)` the console will log `Hello`
+
+
+
+###### useEffect()
+* useEffect is a replacement to 3 lifecycle methods: componentDidMount, componentDidUpdate, componentWillUnmount
+* Best way to think about useEffect is to not think about it as a replacement to these lifecycle methods. but to think of it as a method that can be used when a something requires a 'side effect' to happen or when something needs to get or do something outside of the component. 
+    - Ex. API fetch, Network request, manual DOM manipulation, event listeners/timeouts
+    - anything, as long as it doesnt require touching state.
+* When using useEffect(), useEffect provides a callback function as the first parameter and can require an array as the second parameter. 
+    - This array is essentially a filter for the useEffect to run. So if something or a state is in that array, the  useEffect will run. 
+    - If you leave out the array, the useEffect will run whenever something has changed or something was rerendered similar to componentDidUpdate. However updating state without a filter array, can cause infinite loop considering the component will need to rerender every time you changed a state.
+    - If you include a blank array, the useEffect will act as a componentDidMount and componentDidUpdate and can avoid a infinite loop.
+* Very hard to really demonstrate but with the last lifecycle method useEffect can be used for is componentDidUnmount and SBob Ziroll uses the example of created a separate useEffect method which uses setInterval as some side effect example that increments the count every second. To unmount this incrementation it's necessary to make sure: 
+    - The filter array is empty, initialize an id for the interval method you want to clear then return a function that calls clearInterval with the parameter of the interval methods id.
+    - Ex.
+
+```
+useEffect(() => {
+    const intervalId = setInterval(() => {
+        setCount(prevCount => prevCount + 1)
+    }, 1000)
+    return () => clearInterval(intervalId)
+}, [])
+```
+
+- Basically, it's just a way to stop the incrementation when the component is unmounted.
+
+###### useRef()
+* useRef
+
+###### useCallback()
+* useCallback
+
+###### useMemo()
+* useMemo
+
+###### React.memo
+* React.memo
+
+###### Custom Hooks
+* Custom Hooks
+
+## React Router
+* A way to load different parts of your react app as different pages.
 
 
 ## Extras
