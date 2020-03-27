@@ -11,23 +11,18 @@ const logs = require('./api/logs')
 
 const app = express();
 
-mongoose
-    .connect(process.env.MONGO_URI , {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
-    .then(() => {
-        console.log('Connected to Mongo!');
-    })
-    .catch((err) => {
-    console.error('Error connecting to Mongo', err);
-});
+mongoose.connect(process.env.MONGO_URI , {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
 
 app.use(morgan('common'));      // Morgan shows requests in console for dev purposes and debugging
 app.use(helmet())               // Helmet takes care of response headers. Primarily focus eliminating breaching.
 app.use(cors({
     origin: process.env.CORS_ORIGIN
 }))
+
+app.use(express.json())         //body parser
 
 app.get('/', (req,res) => {
     res.json({
